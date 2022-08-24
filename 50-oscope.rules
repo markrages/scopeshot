@@ -1,0 +1,3 @@
+# "plugdev" seems to be the Ubuntu group for users allowed to access serial ports etc. 
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0957", ATTRS{idProduct}=="17a8", GROUP="plugdev", MODE="0600"
