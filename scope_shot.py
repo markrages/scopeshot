@@ -23,4 +23,6 @@ instr.open()
 
 # Choosing a filename consistent with gnome-screenshot
 t = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
-instr.hardcopy(os.path.expanduser('~/Pictures/Scopeshot from %s.png'%t))
+path = '~/Pictures/Scopeshot from %s.png'%t
+instr.hardcopy(os.path.expanduser(path))
+assert 0 == os.system("open "+path.replace(" ", "\\ "))
